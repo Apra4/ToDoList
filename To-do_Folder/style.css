@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bradley hand',cursive;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2f2be4, #9161af);
+    padding: 10px;
+    border: 2px solid navy;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 10px 50px 50px;
+    border-radius: 25px;
+     border: 2px solid navy;
+}
+.todo-app h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo-app img{
+    margin: 20px;
+}
+.row{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    flex: 0.2;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 8px;
+    user-select: none;
+    cursor: pointer; 
+    position: relative;   
+}
+    
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(button%20img.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: -25px;
+}
+ul li.cked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.cked::before{
+    background-image: url(checkedbutton.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    line-height: 40px;
+    text-align: center; 
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+ul li span:hover{
+    background: gray ;
+    color: white;
+}
